@@ -7,6 +7,7 @@ public abstract class Character {
     private int hungerIndicator = 100;
     private int fatigueIndicator = 100;
     private int christmasIndicator = 100;
+    private boolean isActive = false;
 
     public Character(String name, String gender, int age) {
         this.name = name;
@@ -47,6 +48,10 @@ public abstract class Character {
         return christmasIndicator;
     }
 
+    public boolean getActivity() {
+        return this.isActive;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -71,19 +76,49 @@ public abstract class Character {
         this.christmasIndicator = christmasIndicator;
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
     public void makeSound () {
         System.out.println("Bonjour !\n");
     }
 
     public void move() {
-
     }
 
     public void restore (Food food) {
-        int hunger = food.getHunger() + this.hungerIndicator == 100;
-        if (hunger)
-            this.hungerIndicator = 100;
-        else
+        if (this.getHungerIndicator() == 100) {
+            System.out.println("Le personnage ne peut pas avaler cet ingédient.");
+            return;
+        }
+        int hunger = food.getNutritionalValue() + this.hungerIndicator;
+        if (hunger > 110) {
+            System.out.println("Le personnage n'a pas assez de place pour cet ingrédient.");
+        }
+        else this.hungerIndicator = hunger;
     }
 
+    public void changeActivity () {
+        this.isActive = !isActive;
+    }
+
+    @Override
+    public String toString() {
+        return "Character{" +
+                "name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age=" + age +
+                ", hungerIndicator=" + hungerIndicator +
+                ", fatigueIndicator=" + fatigueIndicator +
+                ", christmasIndicator=" + christmasIndicator +
+                ", isActive=" + isActive +
+                '}';
+    }
+
+    
 }
