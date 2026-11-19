@@ -1,7 +1,6 @@
 package Building;
 
 import java.util.ArrayList;
-import Building.Source.Cleanliness;
 
 public class Building {
     private int area;
@@ -10,6 +9,12 @@ public class Building {
     private int nbPresent;
     private ArrayList<Character> present;
 
+    protected static enum Cleanliness {
+        BAD,
+        GOOD,
+        CLEAN;
+    }
+    
     public Building(int area, int capacity, Cleanliness state){
         this.area = area;
         this.capacity = capacity;
