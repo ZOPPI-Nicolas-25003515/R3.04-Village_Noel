@@ -12,4 +12,12 @@ public class ClockTower extends Building {
         this.date = LocalTime.now();
     }
 
+    public int getChristmasIndicator() {
+        return christmasIndicator;
+    }
+
+    public LocalTime getDate() {
+        return date;
+    }
+
 }
