@@ -6,8 +6,8 @@ public class SnowMan extends Creature {
         super(name, gender, age);
     }
 
-    public SnowMan(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
-        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator);
+    public SnowMan(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
+        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator, location);
     }
 
     @Override

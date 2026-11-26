@@ -1,5 +1,6 @@
 package Character;
 
+
 public abstract class Character {
     private String name;
     private String gender;
@@ -8,6 +9,7 @@ public abstract class Character {
     private int fatigueIndicator = 100;
     private int christmasIndicator = 100;
     private boolean isActive = false;
+    private Location location;
 
     public Character(String name, String gender, int age) {
         this.name = name;
@@ -15,13 +17,14 @@ public abstract class Character {
         this.age = age;
     }
 
-    public Character(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
+    public Character(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
         this.name = name;
         this.gender = gender;
         this.age = age;
         this.fatigueIndicator = fatigueIndicator;
         this.hungerIndicator = hungerIndicator;
         this.christmasIndicator = christmasIndicator;
+        this.location = location;
     }
 
     public String getName() {
@@ -52,6 +55,10 @@ public abstract class Character {
         return this.isActive;
     }
 
+    public Location getLocation() {
+        return location;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -76,6 +83,10 @@ public abstract class Character {
         this.christmasIndicator = christmasIndicator;
     }
 
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     public boolean isActive() {
         return isActive;
     }
@@ -88,7 +99,9 @@ public abstract class Character {
         System.out.println("Bonjour !\n");
     }
 
-    public void move() {
+    public void move(Building building) {
+        if (this.location instanceof Building) this.setLocation(outdoor);
+        else this.setLocation(building);
     }
 
     public void restore (Food food) {
