@@ -18,6 +18,6 @@ public class Humanoid extends Character {
 
     @Override
     public void changeActivity () {
-        if (this.getLocation() instanceof House) this.isActive = !isActive;
+        if (this.getLocation() instanceof Cottage) this.isActive = !isActive;
     }
 }

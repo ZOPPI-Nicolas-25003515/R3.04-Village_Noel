@@ -9,6 +9,7 @@ public abstract class Character {
     private int fatigueIndicator = 100;
     private int christmasIndicator = 100;
     private boolean isActive = false;
+    private boolean isAlive = true;
     private Location location;
 
     public Character(String name, String gender, int age) {
@@ -55,6 +56,9 @@ public abstract class Character {
         return this.isActive;
     }
 
+    public boolean isAlive() {
+        return isAlive;
+    }
     public Location getLocation() {
         return location;
     }
@@ -72,19 +76,23 @@ public abstract class Character {
     }
 
     public void setHungerIndicator(int hungerIndicator) {
-        this.hungerIndicator = hungerIndicator;
+        this.hungerIndicator = hungerIndicator >= 0 ? hungerIndicator : 0;
     }
 
     public void setFatigueIndicator(int fatigueIndicator) {
-        this.fatigueIndicator = fatigueIndicator;
+        this.fatigueIndicator = fatigueIndicator >= 0 ? fatigueIndicator : 0;
     }
 
     public void setChristmasIndicator(int christmasIndicator) {
-        this.christmasIndicator = christmasIndicator;
+        this.christmasIndicator = christmasIndicator >= 0 ? christmasIndicator : 0;
     }
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public void setAlive(boolean alive) {
+        isAlive = alive;
     }
 
     public boolean isActive() {
@@ -97,11 +105,6 @@ public abstract class Character {
 
     public void makeSound () {
         System.out.println("Bonjour !\n");
-    }
-
-    public void move(Building building) {
-        if (this.location instanceof Building) this.setLocation(outdoor);
-        else this.setLocation(building);
     }
 
     public void restore (Food food) {
@@ -130,6 +133,8 @@ public abstract class Character {
                 ", fatigueIndicator=" + fatigueIndicator +
                 ", christmasIndicator=" + christmasIndicator +
                 ", isActive=" + isActive +
+                ", isAlive=" + isAlive +
+                ", location=" + location +
                 '}';
     }
 
