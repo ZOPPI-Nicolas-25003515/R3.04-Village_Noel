@@ -2,7 +2,7 @@ package Character.Humanoid;
 import Character.Humanoid.Humanoid;
 import Character.Chiller;
 
-public class Child extends Humanoid implements Chiller {
+public class Child extends Humanoid implements Fun {
     public Child(String name, String gender, int age) {
         super(name, gender, age);
     }

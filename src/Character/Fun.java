@@ -1,5 +1,5 @@
 package Character;
 
-public interface Chiller {
+public interface Fun {
     public void haveFun();
 }

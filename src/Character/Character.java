@@ -29,67 +29,52 @@ public abstract class Character {
     public String getName() {
         return name;
     }
-
     public String getGender() {
         return gender;
     }
-
     public int getAge() {
         return age;
     }
-
     public int getHungerIndicator() {
         return hungerIndicator;
     }
-
     public int getFatigueIndicator() {
         return fatigueIndicator;
     }
-
     public int getChristmasIndicator() {
         return christmasIndicator;
     }
-
     public boolean getActivity() {
         return this.isActive;
     }
-
     public boolean isAlive() {
         return isAlive;
+    }
+    public boolean isActive() {
+        return isActive;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-
     public void setGender(String gender) {
         this.gender = gender;
     }
-
     public void setAge(int age) {
         this.age = age;
     }
-
     public void setHungerIndicator(int hungerIndicator) {
         this.hungerIndicator = hungerIndicator >= 0 ? hungerIndicator : 0;
     }
-
     public void setFatigueIndicator(int fatigueIndicator) {
         this.fatigueIndicator = fatigueIndicator >= 0 ? fatigueIndicator : 0;
     }
-
     public void setChristmasIndicator(int christmasIndicator) {
         this.christmasIndicator = christmasIndicator >= 0 ? christmasIndicator : 0;
     }
-
     public void setAlive(boolean alive) {
         isAlive = alive;
     }
-
-    public boolean isActive() {
-        return isActive;
-    }
-
     public void setActive(boolean active) {
         isActive = active;
     }
@@ -114,7 +99,6 @@ public abstract class Character {
         this.isActive = !isActive;
     }
 
-    @Override
     public String toString() {
         return "Character{" +
                 "name='" + name + '\'' +

@@ -1,6 +1,6 @@
 package Character.Humanoid;
 
-public class Imp extends Humanoid implements Worker {
+public class Imp extends Humanoid implements Fun {
     public Imp(String name, String gender, int age) {
         super(name, gender, age);
     }
