@@ -6,8 +6,8 @@ public class Area {
     private ArrayList<Character> present;
     private String name;
 
-    public Area(ArrayList<Character> present, String name){
-        this.present = present;
+    public Area(String name){
+        this.present = new ArrayList<Character>();
         this.name = name;
     }
 

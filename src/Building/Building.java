@@ -16,8 +16,8 @@ public class Building extends Area{
         CLEAN;
     }
     
-    public Building(int area, int capacity, Cleanliness state, ArrayList<Character> present, String name){
-        super(present, name);
+    public Building(int area, int capacity, Cleanliness state, String name){
+        super(name);
         this.state = state;
         this.nbPresent = 0;
     }

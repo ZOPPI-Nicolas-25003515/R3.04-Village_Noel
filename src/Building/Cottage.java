@@ -11,8 +11,8 @@ public class Cottage extends Building {
         Women,
     }
 
-    public Cottage(int area, int capacity, Cleanliness state, ArrayList<Character> present){
-        super(area, capacity, state, present, "Chalet");
+    public Cottage(int area, int capacity, Cleanliness state){
+        super(area, capacity, state, "Chalet");
     }
 
     public Gendre getGenre() {
