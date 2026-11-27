@@ -44,7 +44,7 @@ public class Building extends Area{
             }
             return str.toString();
         }
-        return "Pas de personnages présent dans la building";
+        return "Pas de personnages présent dans le building";
     }
 
     public void setNbPresent(int nbPresent) {
