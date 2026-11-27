@@ -1,5 +1,7 @@
 package Building;
 
+import java.util.ArrayList;
+
 public class Cottage extends Building {
 
     private Gendre genre;
@@ -9,8 +11,8 @@ public class Cottage extends Building {
         Women,
     }
 
-    public Cottage(int area, int capacity, Cleanliness state){
-        super(area, capacity, state);
+    public Cottage(int area, int capacity, Cleanliness state, ArrayList<Character> present){
+        super(area, capacity, state, present);
     }
 
     public Gendre getGenre() {

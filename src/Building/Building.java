@@ -2,12 +2,13 @@ package Building;
 
 import java.util.ArrayList;
 
-public class Building {
-    private int area;
+import Area.Area;
+
+public class Building extends Area{
     private int capacity;
+    private int surface;
     private Cleanliness state;
     private int nbPresent;
-    private ArrayList<Character> present;
 
     protected static enum Cleanliness {
         BAD,
@@ -15,45 +16,39 @@ public class Building {
         CLEAN;
     }
     
-    public Building(int area, int capacity, Cleanliness state){
-        this.area = area;
-        this.capacity = capacity;
+    public Building(int area, int capacity, Cleanliness state, ArrayList<Character> present){
+        super(present);
         this.state = state;
         this.nbPresent = 0;
-        this.present = new ArrayList<Character>();        
     }
 
-    public int getArea() {
-        return area;
-    }
     public int getCapacity() {
         return capacity;
+    }
+    public int getSurface() {
+        return surface;
     }
     public int getNbPresent() {
         return nbPresent;
     }
-    public ArrayList<Character> getPresent() {
-        return present;
-    }
     public Cleanliness getState() {
         return state;
     }
-    public String getFeatCharacter(){
-        if (!(present.isEmpty())){
+    
+    @Override 
+    public String getStringCharacter(){
+        if (!this.getPresent().isEmpty()){
             StringBuilder str = new StringBuilder();
-            for (int i=0; i<present.size()-1; i++){
-                str.append(present.get(i).toString() + '\n');
+            for (int i=0; i<this.getPresent().size()-1; i++){
+                str.append(this.getPresent().get(i).toString() + '\n');
             }
             return str.toString();
         }
-        return "No Character in this builbing";
+        return "Pas de personnages présent dans la building";
     }
 
     public void setNbPresent(int nbPresent) {
         this.nbPresent = nbPresent;
-    }
-    public void setPresent(ArrayList<Character> present) {
-        this.present = present;
     }
 
     public String maintenance(){
