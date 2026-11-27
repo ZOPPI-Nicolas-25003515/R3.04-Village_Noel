@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class Area {
     private ArrayList<Character> present;
+    private String name;
 
-    public Area(ArrayList<Character> present){
+    public Area(ArrayList<Character> present, String name){
         this.present = present;
+        this.name = name;
     }
 
     public ArrayList<Character> getPresent() {
@@ -21,6 +23,9 @@ public class Area {
             return str.toString();
         }
         return "Pas de personnages présent dans la zone";
+    }
+    public String getName() {
+        return name;
     }
     
 }
