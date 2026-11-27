@@ -12,7 +12,7 @@ public class Cottage extends Building {
     }
 
     public Cottage(int area, int capacity, Cleanliness state, ArrayList<Character> present){
-        super(area, capacity, state, present, "Cottage");
+        super(area, capacity, state, present, "Chalet");
     }
 
     public Gendre getGenre() {

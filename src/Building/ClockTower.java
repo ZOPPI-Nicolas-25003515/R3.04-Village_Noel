@@ -9,7 +9,7 @@ public class ClockTower extends Building {
     private int christmasIndicator = 100;
 
     public ClockTower(int area, int capacity, Cleanliness state, ArrayList<Character> present){
-        super(area, capacity, state, present, "Clock Tower");
+        super(area, capacity, state, present, "Tour de l'horloge");
         this.date = LocalTime.now();
     }
 
