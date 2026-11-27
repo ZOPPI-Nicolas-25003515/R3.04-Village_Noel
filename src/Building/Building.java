@@ -44,7 +44,7 @@ public class Building extends Area{
             }
             return str.toString();
         }
-        return "Pas de personnages présent dans le building";
+        return "Aucun personnage présent dans le bâtiment.";
     }
 
     public void setNbPresent(int nbPresent) {
@@ -53,12 +53,12 @@ public class Building extends Area{
 
     public String maintenance(){
         if (state == Cleanliness.CLEAN){
-            return "Etat du batiment: CLEAN";
+            return "Etat du bâtiment: CLEAN";
         } else{
             if (nbPresent == 0){
-                return "Netoyage finis" + '\n' + "Etat du batiment: CLEAN";
+                return "Netoyage fini" + '\n' + "Etat du batiment: CLEAN";
             }else{
-                return "Netoyage impossible, personne(s) presente(s)";
+                return "Nett                                                                                                                                                                                oyage impossible, personne(s) presente(s)";
             }
         }
     }
