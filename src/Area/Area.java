@@ -22,7 +22,7 @@ public class Area {
             }
             return str.toString();
         }
-        return "Pas de personnages présent dans la zone";
+        return "Aucun personnage présent dans la zone.";
     }
     public String getName() {
         return name;
