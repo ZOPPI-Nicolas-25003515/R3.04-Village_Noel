@@ -1,5 +1,5 @@
 package Character;
 
 public interface Worker {
-    public void work();
+    public void work(Area area);
 }

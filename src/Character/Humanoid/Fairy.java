@@ -5,8 +5,8 @@ public class Fairy extends Humanoid implements Worker {
         super(name, gender, age);
     }
 
-    public Fairy(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
-        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator,location);
+    public Fairy(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
+        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator);
     }
 
     @Override

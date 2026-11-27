@@ -6,8 +6,8 @@ public class NorthSpirit extends Creature {
         super(name, gender, age);
     }
 
-    public NorthSpirit(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
-        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator, location);
+    public NorthSpirit(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
+        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator);
     }
 
     @Override

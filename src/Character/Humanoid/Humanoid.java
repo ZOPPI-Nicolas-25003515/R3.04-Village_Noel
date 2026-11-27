@@ -7,8 +7,8 @@ public class Humanoid extends Character {
         super(name, gender, age);
     }
 
-    public Humanoid(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
-        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator,location);
+    public Humanoid(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
+        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator);
     }
 
     @Override
@@ -17,7 +17,7 @@ public class Humanoid extends Character {
     }
 
     @Override
-    public void changeActivity () {
-        if (this.getLocation() instanceof Cottage) this.isActive = !isActive;
+    public void changeActivity (Area area) {
+        if (area instanceof Cottage) this.isActive = !isActive;
     }
 }

@@ -7,8 +7,8 @@ public class ElfPostMan extends Humanoid implements Worker {
         super(name, gender, age);
     }
 
-    public ElfPostMan(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
-        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator,location);
+    public ElfPostMan(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
+        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator);
     }
 
     @Override
@@ -16,10 +16,9 @@ public class ElfPostMan extends Humanoid implements Worker {
         return "ElfPostMan{" + super.toString() + "}";
     }
 
-    public void work() {
-        if (this.getLocation() instanceof Post) {
+    public void work(Area area) {
+        if (area instanceof Post) {
             this.setActive(true);
-
         }
     }
 }

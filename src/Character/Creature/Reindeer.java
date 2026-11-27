@@ -6,8 +6,8 @@ public class Reindeer extends Creature {
         super(name, gender, age);
     }
 
-    public Reindeer(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
-        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator, location);
+    public Reindeer(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
+        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator);
     }
 
     @Override

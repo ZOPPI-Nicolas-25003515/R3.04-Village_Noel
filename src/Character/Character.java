@@ -10,7 +10,6 @@ public abstract class Character {
     private int christmasIndicator = 100;
     private boolean isActive = false;
     private boolean isAlive = true;
-    private Location location;
 
     public Character(String name, String gender, int age) {
         this.name = name;
@@ -18,14 +17,13 @@ public abstract class Character {
         this.age = age;
     }
 
-    public Character(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
+    public Character(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
         this.name = name;
         this.gender = gender;
         this.age = age;
         this.fatigueIndicator = fatigueIndicator;
         this.hungerIndicator = hungerIndicator;
         this.christmasIndicator = christmasIndicator;
-        this.location = location;
     }
 
     public String getName() {
@@ -59,9 +57,6 @@ public abstract class Character {
     public boolean isAlive() {
         return isAlive;
     }
-    public Location getLocation() {
-        return location;
-    }
 
     public void setName(String name) {
         this.name = name;
@@ -85,10 +80,6 @@ public abstract class Character {
 
     public void setChristmasIndicator(int christmasIndicator) {
         this.christmasIndicator = christmasIndicator >= 0 ? christmasIndicator : 0;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public void setAlive(boolean alive) {
@@ -134,7 +125,6 @@ public abstract class Character {
                 ", christmasIndicator=" + christmasIndicator +
                 ", isActive=" + isActive +
                 ", isAlive=" + isAlive +
-                ", location=" + location +
                 '}';
     }
 

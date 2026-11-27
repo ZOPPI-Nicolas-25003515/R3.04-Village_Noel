@@ -7,8 +7,8 @@ public class Lycanthrop extends Creature {
         super(name, gender, age);
     }
 
-    public Lycanthrop(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator,Location location) {
-        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator,location);
+    public Lycanthrop(String name, String gender, int age, int fatigueIndicator, int hungerIndicator, int christmasIndicator) {
+        super(name, gender, age, fatigueIndicator, hungerIndicator, christmasIndicator);
     }
 
     @Override
@@ -16,14 +16,14 @@ public class Lycanthrop extends Creature {
         return "Lycanthrop{" + super.toString() + "}";
     }
 
-    public void devoure(Humanoid humanoid) {
+    public void devoure(Humanoid humanoid, Area area) {
         if (this.getHungerIndicator() <= 65) {
             humanoid.setAlive(false);
             this.setHungerIndicator(this.getHungerIndicator() + 50);
             this.setChristmasIndicator(this.getChristmasIndicator() + 10);
             System.out.println(this.getName() + " a dévoré " + humanoid.getName() + " !\n");
-            for (int i = 0; i < this.getLocation().present.size(); ++i) {
-                if (this.getLocation().present.get(i) instanceof Humanoid) this.getLocation().present.get(i).setChristmasIndicator(this.getChristmasIndicator() - 50);
+            for (int i = 0; i < area.present.size(); ++i) {
+                if (area.present.get(i) instanceof Humanoid) area.present.get(i).setChristmasIndicator(this.getChristmasIndicator() - 50);
             }
         }
     }
