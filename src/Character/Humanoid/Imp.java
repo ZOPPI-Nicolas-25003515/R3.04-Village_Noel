@@ -21,7 +21,7 @@ public class Imp extends Humanoid implements Fun {
     public void makePrank(Prank prank, Area area) {
         System.out.println(this.getName() + " a fait une farce de " + prank.getClass() + " !\n");
         for (int i = 0; i < area.present.size(); ++i) {
-            if (area.present.get(i) instanceof Humanoid) area.present.get(i).setChristmasIndicator(this.getChristmasIndicator() + prank.getChristmasValue());
+            if (area.present.get(i) instanceof Humanoid) area.present.get(i).setChristmasIndicator(this.getChristmasIndicator() + 5);
             else area.present.get(i).setChristmasIndicator(this.getChristmasIndicator() - 5);
         }
     }
